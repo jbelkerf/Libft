@@ -6,7 +6,7 @@
 /*   By: jbelkerf <jbelkerf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 16:07:18 by jbelkerf          #+#    #+#             */
-/*   Updated: 2024/10/21 16:07:19 by jbelkerf         ###   ########.fr       */
+/*   Updated: 2024/10/24 17:03:25 by jbelkerf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	s_s = ft_strlen(src);
 	i = s_d;
 	j = 0;
-	if (size <= 0)
+	if (size == 0)
 		return (s_s);
 	else if (s_d >= size)
 		return (size + s_s);
