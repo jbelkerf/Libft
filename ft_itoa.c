@@ -6,13 +6,13 @@
 /*   By: jbelkerf <jbelkerf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 16:00:27 by jbelkerf          #+#    #+#             */
-/*   Updated: 2024/10/22 11:00:53 by jbelkerf         ###   ########.fr       */
+/*   Updated: 2024/10/24 19:48:19 by jbelkerf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count(int n)
+static int	count(int n)
 {
 	int	w;
 
@@ -25,7 +25,7 @@ int	count(int n)
 	return (w);
 }
 
-char	*full_it(int n, int w)
+static char	*full_it(int n, int w)
 {
 	char	*re;
 

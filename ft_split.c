@@ -6,13 +6,13 @@
 /*   By: jbelkerf <jbelkerf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 16:07:57 by jbelkerf          #+#    #+#             */
-/*   Updated: 2024/10/22 11:07:17 by jbelkerf         ###   ########.fr       */
+/*   Updated: 2024/10/24 19:49:52 by jbelkerf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	c_word(char const *s, char c)
+static int	c_word(char const *s, char c)
 {
 	int	i;
 	int	w;
@@ -33,7 +33,7 @@ int	c_word(char const *s, char c)
 	return (w);
 }
 
-int	c_count(const char *s, char c, int i)
+static int	c_count(const char *s, char c, int i)
 {
 	int	w;
 
@@ -46,7 +46,7 @@ int	c_count(const char *s, char c, int i)
 	return (w);
 }
 
-char	*ff_copy(const char *s, char *re, char c, int i)
+static char	*ff_copy(const char *s, char *re, char c, int i)
 {
 	int	j;
 	int	w_c;

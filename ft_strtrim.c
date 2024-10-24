@@ -6,13 +6,13 @@
 /*   By: jbelkerf <jbelkerf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 16:05:15 by jbelkerf          #+#    #+#             */
-/*   Updated: 2024/10/22 10:55:26 by jbelkerf         ###   ########.fr       */
+/*   Updated: 2024/10/24 19:50:36 by jbelkerf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	is_set(char c, char const *set)
+static int	is_set(char c, char const *set)
 {
 	int	i;
 
@@ -26,7 +26,7 @@ int	is_set(char c, char const *set)
 	return (0);
 }
 
-char	*f_copy(const char *s, int l, const char *set)
+static char	*f_copy(const char *s, int l, const char *set)
 {
 	char	*re;
 	int		i;
