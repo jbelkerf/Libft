@@ -6,12 +6,17 @@
 /*   By: jbelkerf <jbelkerf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 15:58:33 by jbelkerf          #+#    #+#             */
-/*   Updated: 2024/10/21 15:58:56 by jbelkerf         ###   ########.fr       */
+/*   Updated: 2024/10/25 17:29:31 by jbelkerf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+ *the bzero func take a void pointer to an memeory and fail it with '\0' aka 0
+ *the char pointer p created because we cant change or asigne to
+ *									a void pointer nor derefrence
+ */
 void	ft_bzero(void *s, size_t n)
 {
 	size_t	i;
