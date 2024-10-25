@@ -6,12 +6,17 @@
 /*   By: jbelkerf <jbelkerf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 16:09:13 by jbelkerf          #+#    #+#             */
-/*   Updated: 2024/10/22 10:47:21 by jbelkerf         ###   ########.fr       */
+/*   Updated: 2024/10/25 20:53:37 by jbelkerf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+ * the memcpy func copy the n byte from the memory src to the memory dest 
+ * if the n is 0 then the memcpy return the dst if the both memory is NULL
+ * then it returns null if everything is perfect then dest is being returned
+ */
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	char	*b;

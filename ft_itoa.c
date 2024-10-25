@@ -6,12 +6,15 @@
 /*   By: jbelkerf <jbelkerf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 16:00:27 by jbelkerf          #+#    #+#             */
-/*   Updated: 2024/10/24 19:48:19 by jbelkerf         ###   ########.fr       */
+/*   Updated: 2024/10/25 18:43:19 by jbelkerf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+ * the count func counts the number of digit in n by dividing by 10 
+ */
 static int	count(int n)
 {
 	int	w;
@@ -24,6 +27,12 @@ static int	count(int n)
 	}
 	return (w);
 }
+/*
+ * the full_it func check if the n is negative if yes it add 1 to total n 
+ * lenght and fail the first index by '-' and then it handles the n like 
+ * positive, it start by failing the last index of str by '\0' aka 0
+ * then fail the others by n digits
+ */
 
 static char	*full_it(int n, int w)
 {
@@ -49,6 +58,13 @@ static char	*full_it(int n, int w)
 	return (re);
 }
 
+/*
+ * 1-) the itoa func transform the given n to an string from and return it
+ * if the n is 0 or the MAX negative it send to strup to make a duplicate 
+ * and return 
+ * the n is sent to count to count the number of digit in it when it done it 
+ * sent again with its lenght to full_it that does the real work
+ */
 char	*ft_itoa(int n)
 {
 	char	*cas;

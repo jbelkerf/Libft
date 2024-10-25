@@ -6,11 +6,14 @@
 /*   By: jbelkerf <jbelkerf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 16:09:06 by jbelkerf          #+#    #+#             */
-/*   Updated: 2024/10/21 16:39:08 by jbelkerf         ###   ########.fr       */
+/*   Updated: 2024/10/25 20:54:50 by jbelkerf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+/*
+ *
+ */
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

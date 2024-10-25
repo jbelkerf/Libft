@@ -6,12 +6,15 @@
 /*   By: jbelkerf <jbelkerf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 16:09:20 by jbelkerf          #+#    #+#             */
-/*   Updated: 2024/10/24 19:48:56 by jbelkerf         ###   ########.fr       */
+/*   Updated: 2024/10/25 21:27:07 by jbelkerf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+ *
+ */
 static int	check_overl(char *d, char *s, size_t n)
 {
 	if (s < d && s + n > d)
@@ -42,6 +45,9 @@ static void	*r_cpy(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
+/*
+ * the memmove func check if the src and the dest is null then it returns null
+ */
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	char	*s;

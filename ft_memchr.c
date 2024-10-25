@@ -6,12 +6,16 @@
 /*   By: jbelkerf <jbelkerf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 16:08:59 by jbelkerf          #+#    #+#             */
-/*   Updated: 2024/10/21 16:39:46 by jbelkerf         ###   ########.fr       */
+/*   Updated: 2024/10/25 20:47:23 by jbelkerf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+ * the memchr func look up the n byte of  memory pointed by s for the first
+ * match with the int c then it return a pinter to that match in s
+ */
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*p;
