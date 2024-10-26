@@ -6,20 +6,39 @@
 /*   By: jbelkerf <jbelkerf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 16:07:57 by jbelkerf          #+#    #+#             */
-/*   Updated: 2024/10/26 15:00:27 by jbelkerf         ###   ########.fr       */
+/*   Updated: 2024/10/26 19:24:23 by jbelkerf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+int c_c(char *ss, char c)
+{
+	int i;
+
+	while (*ss != c && *ss)
+	{
+		ss++;
+		i++;
+	}
+	return (i + 1);
+}
+
 char	**fail_tab(char **re, char *ss, char c, int w_c)
 {
 	int	i;
+	int c;
 
 	i = 0;
 	while (i < w_c)
 	{
-		re[i] = (char *)malloc();
+		re[i] = (char *)malloc(c_c(ss, c) * sizeof(char));
+		j = 0;
+		while (*ss != c && *ss)
+		{
+			re[i][j] = *ss;
+			j++;
+		}
 		i++;
 	}
 }
