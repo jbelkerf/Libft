@@ -6,12 +6,15 @@
 /*   By: jbelkerf <jbelkerf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 16:08:43 by jbelkerf          #+#    #+#             */
-/*   Updated: 2024/10/22 11:05:48 by jbelkerf         ###   ########.fr       */
+/*   Updated: 2024/10/28 16:16:33 by jbelkerf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+ * the lstnew take a void content and put it in a new node and return thr node
+ */
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*new;

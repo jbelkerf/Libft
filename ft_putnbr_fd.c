@@ -6,12 +6,15 @@
 /*   By: jbelkerf <jbelkerf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 16:09:53 by jbelkerf          #+#    #+#             */
-/*   Updated: 2024/10/21 16:09:54 by jbelkerf         ###   ########.fr       */
+/*   Updated: 2024/10/28 14:58:08 by jbelkerf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+ * this func print a number to the file discreptor fd
+ */
 void	ft_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)

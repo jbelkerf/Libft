@@ -6,7 +6,7 @@
 /*   By: jbelkerf <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 21:28:31 by jbelkerf          #+#    #+#             */
-/*   Updated: 2024/10/28 11:42:16 by jbelkerf         ###   ########.fr       */
+/*   Updated: 2024/10/28 15:23:07 by jbelkerf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*nw;
 
 	nw = 0;
-	if (!lst)
+	if (!lst || !f || !del)
 		return (lst);
 	p = lst;
 	while (p)

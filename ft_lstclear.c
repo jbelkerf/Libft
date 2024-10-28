@@ -6,12 +6,15 @@
 /*   By: jbelkerf <jbelkerf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 16:01:02 by jbelkerf          #+#    #+#             */
-/*   Updated: 2024/10/21 16:01:05 by jbelkerf         ###   ########.fr       */
+/*   Updated: 2024/10/28 16:30:29 by jbelkerf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+ * the lstclear take a lst and del the entire lst
+ */
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*p;
@@ -20,8 +23,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	while (p)
 	{
 		p = (*lst)->next;
-		del((*lst)->content);
-		free(*lst);
+		ft_lstdelone(*lst, del);
 		*lst = p;
 	}
 }

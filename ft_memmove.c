@@ -6,14 +6,23 @@
 /*   By: jbelkerf <jbelkerf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 16:09:20 by jbelkerf          #+#    #+#             */
-/*   Updated: 2024/10/25 21:27:07 by jbelkerf         ###   ########.fr       */
+/*   Updated: 2024/10/28 15:42:22 by jbelkerf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
- *
+ * check overlap handle 3 cases
+ * 1- s ----------      
+ *                            return 1
+ *         d----------
+ *         ####
+ * 2-      s----------
+ *                            return 2
+ *     d---------
+ *     	   ####
+ * 3- there is no overlap     return 0
  */
 static int	check_overl(char *d, char *s, size_t n)
 {
@@ -24,6 +33,9 @@ static int	check_overl(char *d, char *s, size_t n)
 	return (0);
 }
 
+/*
+ * the r_cpy reverse copy start the copy from the end
+ */
 static void	*r_cpy(void *dest, const void *src, size_t n)
 {
 	char	*b;

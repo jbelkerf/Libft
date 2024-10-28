@@ -6,12 +6,15 @@
 /*   By: jbelkerf <jbelkerf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 16:08:06 by jbelkerf          #+#    #+#             */
-/*   Updated: 2024/10/21 16:37:38 by jbelkerf         ###   ########.fr       */
+/*   Updated: 2024/10/28 14:54:40 by jbelkerf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+ * this func print the string s to the file discreptor fd
+ */
 void	ft_putstr_fd(char *s, int fd)
 {
 	while (*s)

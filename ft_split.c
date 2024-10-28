@@ -6,7 +6,7 @@
 /*   By: jbelkerf <jbelkerf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 16:07:57 by jbelkerf          #+#    #+#             */
-/*   Updated: 2024/10/28 01:22:57 by jbelkerf         ###   ########.fr       */
+/*   Updated: 2024/10/28 15:06:52 by jbelkerf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,16 +110,3 @@ char	**ft_split(char const *s, char c)
 		return (0);
 	return (fill_tab(re, ss, c, w_c));
 }
-/*#include <stdio.h>
-int main()
-{
-	char *lst = "      split       this for   me  !       ";
-	char **re = ft_split(lst, ' ');
-	int i = 0;
-	while (i <= 5)
-	{
-		printf("%s\n", re[i]);
-		i++;
-	}
-	return (0);
-}*/

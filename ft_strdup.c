@@ -6,14 +6,14 @@
 /*   By: jbelkerf <jbelkerf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 16:07:42 by jbelkerf          #+#    #+#             */
-/*   Updated: 2024/10/28 13:56:27 by jbelkerf         ###   ########.fr       */
+/*   Updated: 2024/10/28 14:47:25 by jbelkerf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
- * 
+ * the strdup func take a string and ceate a duplicate to this func
  */
 char	*ft_strdup(const char *s)
 {
