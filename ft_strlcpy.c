@@ -6,12 +6,16 @@
 /*   By: jbelkerf <jbelkerf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 16:07:09 by jbelkerf          #+#    #+#             */
-/*   Updated: 2024/10/21 16:07:10 by jbelkerf         ###   ########.fr       */
+/*   Updated: 2024/10/28 12:50:00 by jbelkerf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+ * the strlcpy copy from src to dest respecting a giving size and ensuring 
+ * there is a place for a null terminator
+ */
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	size_t	i;
