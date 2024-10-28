@@ -6,7 +6,7 @@
 /*   By: jbelkerf <jbelkerf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 16:07:49 by jbelkerf          #+#    #+#             */
-/*   Updated: 2024/10/28 14:53:00 by jbelkerf         ###   ########.fr       */
+/*   Updated: 2024/10/28 19:38:56 by jbelkerf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,19 +17,17 @@
  */
 char	*ft_strchr(const char *s, int c)
 {
-	unsigned char		*p;
-	unsigned char		x;
+	char	*p;
 
-	x = (unsigned char)c;
-	p = (unsigned char *)s;
+	p = (char *)s;
 	while (*p)
 	{
-		if (*p == x)
-			return ((char *)p);
+		if (*p == (char)c)
+			return (p);
 		p++;
 	}
-	if (x == 0)
-		return ((char *)p);
+	if ((char)c == 0)
+		return (p);
 	else
 		return (0);
 }
