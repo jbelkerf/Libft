@@ -9,21 +9,26 @@ CC=gcc
 AR=ar
 ARFLAG= -rcs
 CFLAGS= -c -Wall -Werror -Wextra
+
 %.o: %.c libft.h
 	$(CC) $(CFLAGS) $< -o $@
+
 $(NAME) : $(OBJ)
 	$(AR) $(ARFLAG) $(NAME) $(OBJ)
 
 $(OBJ) : libft.h
+$(BONU) : libft.h
 
 all : $(NAME) bonus 
+
 clean:
 	rm -rf *.o
+
 fclean:
 	rm -rf *.o
 	rm -rf $(NAME)
-re: fclean all
+
 bonus: $(BONU)
 	$(AR) $(ARFLAG) $(NAME) $(BONU)
 
-$(BONU) : libft.h
+re : fclean all
