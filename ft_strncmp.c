@@ -6,12 +6,19 @@
 /*   By: jbelkerf <jbelkerf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 16:05:49 by jbelkerf          #+#    #+#             */
-/*   Updated: 2024/10/21 16:31:59 by jbelkerf         ###   ########.fr       */
+/*   Updated: 2024/10/28 12:36:37 by jbelkerf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+ * the strncmp compare n byte of two strings s1 and s2 if all the n byte equal
+ * then we return 0
+ * if there's a defrence we return that defrence 
+ *
+ * ### hard cases if n == 0 we return 0
+ */
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t			i;
@@ -25,10 +32,9 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	{
 		c1 = s1[i];
 		c2 = s2[i];
-		if (c1 == c2)
-			i++;
-		else
+		if (c1 != c2)
 			return (c1 - c2);
+		i++;
 	}
 	c1 = s1[i];
 	c2 = s2[i];

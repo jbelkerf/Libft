@@ -6,12 +6,15 @@
 /*   By: jbelkerf <jbelkerf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 16:06:59 by jbelkerf          #+#    #+#             */
-/*   Updated: 2024/10/21 16:07:00 by jbelkerf         ###   ########.fr       */
+/*   Updated: 2024/10/28 12:38:02 by jbelkerf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+ * no need for documentation
+ */
 size_t	ft_strlen(const char *str)
 {
 	int	i;
