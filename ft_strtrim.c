@@ -6,28 +6,11 @@
 /*   By: jbelkerf <jbelkerf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 16:05:15 by jbelkerf          #+#    #+#             */
-/*   Updated: 2024/10/28 12:11:13 by jbelkerf         ###   ########.fr       */
+/*   Updated: 2024/10/31 11:27:24 by jbelkerf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*
- * is_set func is used to check if the givven char is set or not
- */
-static int	is_set(char c, char const *set)
-{
-	int	i;
-
-	i = 0;
-	while (set[i])
-	{
-		if (c == set[i])
-			return (1);
-		i++;
-	}
-	return (0);
-}
 
 /*
  * the f_copy create the returned string it first alocate the memory then skip
@@ -44,7 +27,7 @@ static char	*f_copy(const char *s, int l, const char *set)
 		return (NULL);
 	j = 0;
 	i = 0;
-	while (is_set(s[i], set))
+	while (ft_strch(set, s[i]))
 	{
 		i++;
 	}
@@ -80,14 +63,14 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (ft_strdup(""));
 	if (*set == '\0')
 		return (ft_strdup(s1));
-	while (is_set(s1[i], set))
+	while (ft_strchr(set, s[i]))
 		i++;
 	if (s1[i] == '\0')
 		return (ft_strdup(""));
 	len = ft_strlen(s1) - i;
 	i = ft_strlen(s1);
 	i--;
-	while (is_set(s1[i], set))
+	while (ft_strchr(set, s[1]))
 		i--;
 	len = len - (ft_strlen(s1) - i) + 1;
 	re = f_copy(s1, len, set);
