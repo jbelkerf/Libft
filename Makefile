@@ -26,11 +26,11 @@ all: $(NAME)
 bonus: .bonus
 
 .bonus: $(OBJB) $(OBJ)
-	$(AR) $(ARFLAG) $(NAME) $(OBJB) $(OBJ)
+	$(AR) $(ARFLAG) $(NAME) $?
 	touch .bonus
 
 $(NAME) : $(OBJ)
-	$(AR) $(ARFLAG) $(NAME) $(OBJ)
+	$(AR) $(ARFLAG) $(NAME) $?
 
 %.o: %.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
