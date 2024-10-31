@@ -6,7 +6,7 @@
 /*   By: jbelkerf <jbelkerf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 15:58:43 by jbelkerf          #+#    #+#             */
-/*   Updated: 2024/10/25 17:40:28 by jbelkerf         ###   ########.fr       */
+/*   Updated: 2024/10/31 10:02:30 by jbelkerf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,13 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*p;
+	size_t	t;
 
+	t = nmemb * size;
+	if (!t)
+		return (malloc(0));
+	if (size != (t / nmemb))
+		return (NULL);
 	p = (void *)malloc(nmemb * size);
 	if (p == NULL)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: jbelkerf <jbelkerf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 16:00:27 by jbelkerf          #+#    #+#             */
-/*   Updated: 2024/10/25 18:43:19 by jbelkerf         ###   ########.fr       */
+/*   Updated: 2024/10/30 16:40:04 by jbelkerf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,15 +34,12 @@ static int	count(int n)
  * then fail the others by n digits
  */
 
-static char	*full_it(int n, int w)
+static char	*full_it(int n, int w, int sign)
 {
 	char	*re;
 
-	if (n < 0)
-	{
-		n = n * (-1);
+	if (sign == -1)
 		w = w + 1;
-	}
 	re = (char *)malloc((w + 1) * sizeof(char));
 	if (re == NULL)
 		return (NULL);
@@ -67,14 +64,21 @@ static char	*full_it(int n, int w)
  */
 char	*ft_itoa(int n)
 {
+	int		sign;
 	char	*cas;
 	int		w;
 
+	sign = 1;
 	cas = "-2147483648";
 	if (n == 0)
 		cas = "0";
 	if (n == -2147483648 || n == 0)
 		return (ft_strdup(cas));
+	if (n < 0)
+	{
+		n = n * (-1);
+		sign = -1;
+	}
 	w = count(n);
-	return (full_it(n, w));
+	return (full_it(n, w, sign));
 }

@@ -6,7 +6,7 @@
 /*   By: jbelkerf <jbelkerf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 16:05:49 by jbelkerf          #+#    #+#             */
-/*   Updated: 2024/10/28 12:36:37 by jbelkerf         ###   ########.fr       */
+/*   Updated: 2024/10/30 16:04:51 by jbelkerf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	c1 = s1[i];
 	c2 = s2[i];
-	if (i == n)
-		return (0);
-	return (c1 - c2);
+	if (i < n)
+		return (c1 - c2);
+	return (0);
 }
