@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbelkerf <jbelkerf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 16:00:37 by jbelkerf          #+#    #+#             */
-/*   Updated: 2024/10/30 17:25:03 by jbelkerf         ###   ########.fr       */
+/*   Updated: 2024/10/31 18:51:02 by jbelkerf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
+ *
  * the func take a list and a node then add the node to the back of list
  */
 void	ft_lstadd_back(t_list **lst, t_list *new)
