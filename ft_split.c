@@ -6,7 +6,7 @@
 /*   By: jbelkerf <jbelkerf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 16:07:57 by jbelkerf          #+#    #+#             */
-/*   Updated: 2024/10/28 15:06:52 by jbelkerf         ###   ########.fr       */
+/*   Updated: 2024/11/01 13:25:05 by jbelkerf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,6 +95,8 @@ char	**ft_split(char const *s, char c)
 	char	*ss;
 	int		w_c;
 
+	if (s == NULL)
+		return (NULL);
 	ss = (char *)s;
 	w_c = c_w(ss, c);
 	if (w_c == 0)

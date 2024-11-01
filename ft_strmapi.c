@@ -6,7 +6,7 @@
 /*   By: jbelkerf <jbelkerf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 16:06:49 by jbelkerf          #+#    #+#             */
-/*   Updated: 2024/10/21 16:32:57 by jbelkerf         ###   ########.fr       */
+/*   Updated: 2024/11/01 13:25:56 by jbelkerf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		l;
 	char	*re;
 
+	if (s == NULL || f == NULL)
+		return (NULL);
 	i = 0;
 	l = ft_strlen(s);
 	re = (char *)malloc((l + 1) * sizeof(char));
