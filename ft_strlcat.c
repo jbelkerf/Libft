@@ -6,7 +6,7 @@
 /*   By: jbelkerf <jbelkerf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 16:07:18 by jbelkerf          #+#    #+#             */
-/*   Updated: 2024/10/31 16:58:52 by jbelkerf         ###   ########.fr       */
+/*   Updated: 2024/11/02 13:49:33 by jbelkerf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,17 +20,15 @@
  */
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	len_d;
-	size_t	len_s;
 	size_t	i;
 	size_t	j;
 
-	len_d = ft_strlen(dst);
-	len_s = ft_strlen(src);
-	i = len_d;
+	if (size == 0)
+		return (ft_strlen(src));
+	i = ft_strlen(dst);
 	j = 0;
-	if (len_d >= size)
-		return (size + len_s);
+	if (ft_strlen(dst) >= size)
+		return (size + ft_strlen(src));
 	if (size != 0)
 	{
 		while (i < size - 1 && src[j])
@@ -41,5 +39,5 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		}
 		dst[i] = 0;
 	}
-	return (len_d + len_s);
+	return (i - j + ft_strlen(src));
 }
