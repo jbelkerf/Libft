@@ -6,7 +6,7 @@
 /*   By: jbelkerf <jbelkerf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 15:58:23 by jbelkerf          #+#    #+#             */
-/*   Updated: 2024/11/02 10:45:40 by jbelkerf         ###   ########.fr       */
+/*   Updated: 2024/11/03 15:01:33 by jbelkerf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,10 @@ int	ft_atoi(const char *str)
 	{
 		n = n * 10 + (*str - '0');
 		str++;
+		if (n < 0 && sign == -1)
+			return (0);
+		else if (n < 0 && sign == 1)
+			return (-1);
 	}
 	return ((int)(sign * n));
 }
