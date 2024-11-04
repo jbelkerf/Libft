@@ -6,7 +6,7 @@
 /*   By: jbelkerf <jbelkerf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 16:00:37 by jbelkerf          #+#    #+#             */
-/*   Updated: 2024/11/01 15:23:33 by jbelkerf         ###   ########.fr       */
+/*   Updated: 2024/11/04 16:38:58 by jbelkerf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*last;
 
-	if (!new)
+	if (!new || !lst)
 		return ;
 	if (!*lst)
 		*lst = new;

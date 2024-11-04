@@ -6,7 +6,7 @@
 /*   By: jbelkerf <jbelkerf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 16:05:38 by jbelkerf          #+#    #+#             */
-/*   Updated: 2024/11/03 15:23:02 by jbelkerf         ###   ########.fr       */
+/*   Updated: 2024/11/04 16:49:31 by jbelkerf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,17 +24,19 @@ char	*ft_strnstr(const char *big, const char *lil, size_t len)
 	size_t	j;
 	size_t	i;
 
-	if (*lil == '\0' || len == 0)
+	if (*lil == '\0')
 		return ((char *)big);
+	if (len == 0)
+		return (NULL);
 	i = 0;
-	while (big[i])
+	while (big[i] && i < len)
 	{
 		j = 0;
-		while (big[i + j] == lil[j] && lil[j] && big[i + j] && (i + j < len))
+		while (lil[j] && (i + j < len) && big[i + j] == lil[j] && big[i + j])
 			j++;
 		if (lil[j] == '\0')
 			return ((char *)(big + i));
 		i++;
 	}
-	return (0);
+	return (NULL);
 }

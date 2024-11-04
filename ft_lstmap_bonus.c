@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jbelkerf <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jbelkerf <jbelkerf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 21:28:31 by jbelkerf          #+#    #+#             */
-/*   Updated: 2024/11/01 13:41:05 by jbelkerf         ###   ########.fr       */
+/*   Updated: 2024/11/04 16:28:15 by jbelkerf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*p;
 	t_list	*nw;
 
-	nw = 0;
+	nw = NULL;
 	if (!lst || !f || !del)
 		return (NULL);
 	p = lst;

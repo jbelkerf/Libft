@@ -6,7 +6,7 @@
 /*   By: jbelkerf <jbelkerf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 16:07:49 by jbelkerf          #+#    #+#             */
-/*   Updated: 2024/10/28 19:38:56 by jbelkerf         ###   ########.fr       */
+/*   Updated: 2024/11/04 13:29:31 by jbelkerf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ char	*ft_strchr(const char *s, int c)
 	if ((char)c == 0)
 		return (p);
 	else
-		return (0);
+		return (NULL);
 }

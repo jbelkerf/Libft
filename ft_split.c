@@ -6,7 +6,7 @@
 /*   By: jbelkerf <jbelkerf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 16:07:57 by jbelkerf          #+#    #+#             */
-/*   Updated: 2024/11/01 13:25:05 by jbelkerf         ###   ########.fr       */
+/*   Updated: 2024/11/04 13:23:30 by jbelkerf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static char	**h_fail(char **re, int elm)
 		i++;
 	}
 	free(re);
-	return (0);
+	return (NULL);
 }
 
 static int	c_c(char *ss, char c)

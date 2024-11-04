@@ -6,7 +6,7 @@
 /*   By: jbelkerf <jbelkerf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 16:01:02 by jbelkerf          #+#    #+#             */
-/*   Updated: 2024/11/01 13:39:31 by jbelkerf         ###   ########.fr       */
+/*   Updated: 2024/11/04 16:34:57 by jbelkerf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,5 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		ft_lstdelone(*lst, del);
 		*lst = p;
 	}
+	*lst = NULL;
 }

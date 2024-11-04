@@ -6,7 +6,7 @@
 /*   By: jbelkerf <jbelkerf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 16:00:51 by jbelkerf          #+#    #+#             */
-/*   Updated: 2024/11/01 13:34:10 by jbelkerf         ###   ########.fr       */
+/*   Updated: 2024/11/04 16:38:01 by jbelkerf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
  */
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (new != NULL)
+	if (new != NULL || lst != NULL)
 	{
 		new->next = *lst;
 		*lst = new;

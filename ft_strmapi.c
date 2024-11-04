@@ -6,7 +6,7 @@
 /*   By: jbelkerf <jbelkerf@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 16:06:49 by jbelkerf          #+#    #+#             */
-/*   Updated: 2024/11/01 13:25:56 by jbelkerf         ###   ########.fr       */
+/*   Updated: 2024/11/04 16:42:02 by jbelkerf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int		i;
-	int		l;
-	char	*re;
+	size_t		i;
+	size_t		l;
+	char		*re;
 
 	if (s == NULL || f == NULL)
 		return (NULL);
